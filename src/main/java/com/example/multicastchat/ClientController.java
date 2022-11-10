@@ -34,7 +34,7 @@ public class ClientController implements Initializable {
                 username.setText("Anonymous");
             }
             int outPort = 4446;
-            byte[] message = (username.getText() + ": " + inputTextField.getText()).getBytes();
+            byte[] message = (username.getText().trim() + ": " + inputTextField.getText().trim()).getBytes();
 
             try (DatagramSocket socket = new DatagramSocket()) {
                 InetAddress address = InetAddress.getLocalHost();
