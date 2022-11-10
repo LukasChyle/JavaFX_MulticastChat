@@ -6,7 +6,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.MulticastSocket;
 
-public class ServerApplication implements Runnable {
+public class Server implements Runnable {
 
     public void multicast(String multicastMessage) {
         byte[] buf;
@@ -39,6 +39,6 @@ public class ServerApplication implements Runnable {
     }
 
     public static void main(String[] args) {
-        (new Thread(new ServerApplication())).start();
+        (new Thread(new Server())).start();
     }
 }
