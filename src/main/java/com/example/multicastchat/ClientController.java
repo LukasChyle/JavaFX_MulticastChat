@@ -48,10 +48,10 @@ public class ClientController implements Initializable {
 
     Runnable task = () -> {
         byte[] buf = new byte[256];
-        int inPort = 6655;
+        int inPort = 12540;
 
         try (MulticastSocket socket = new MulticastSocket(inPort)) {
-            InetAddress ip = InetAddress.getByName("230.0.0.0");
+            InetAddress ip = InetAddress.getByName("234.235.236.237");
             InetSocketAddress group = new InetSocketAddress(ip, inPort);
             NetworkInterface netIf = NetworkInterface.getByName("Ethernet");
             socket.joinGroup(group, netIf);

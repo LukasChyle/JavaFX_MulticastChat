@@ -10,10 +10,10 @@ public class Server implements Runnable {
 
     public void multicast(String multicastMessage) {
         byte[] buf;
-        int outPort = 6655;
+        int outPort =  12540;
 
         try (MulticastSocket socket = new MulticastSocket()) {
-            InetAddress ip = InetAddress.getByName("230.0.0.0");
+            InetAddress ip = InetAddress.getByName("234.235.236.237");
             buf = multicastMessage.getBytes();
             DatagramPacket packet = new DatagramPacket(buf, buf.length, ip, outPort);
             socket.send(packet);
