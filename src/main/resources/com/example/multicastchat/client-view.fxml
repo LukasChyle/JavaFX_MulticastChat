@@ -18,12 +18,11 @@
         <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
         </padding>
-        <TextArea fx:id="dialogTextArea" editable="false" mouseTransparent="true" prefHeight="565.0"
-                  prefWidth="500.0" wrapText="true">
+        <TextArea fx:id="dialogTextArea" editable="false" wrapText="true">
             <padding>
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
             </padding>
-    </TextArea>
+        </TextArea>
     </ScrollPane>
     <Button fx:id="disconnectButton" layoutX="290.0" layoutY="15.0" mnemonicParsing="false"
             onAction="#onDisconnectButtonClick" prefHeight="40.0" prefWidth="200.0" text="Disconnect"/>
@@ -33,7 +32,7 @@
             prefHeight="40.0" prefWidth="65.0" text="Send"/>
     <TextField fx:id="username" layoutX="10.0" layoutY="15.0" prefHeight="40.0" prefWidth="270.0" promptText="Username">
         <font>
-          <Font name="System Bold" size="14.0"/>
+            <Font name="System Bold" size="14.0"/>
         </font>
     </TextField>
 </Pane>
